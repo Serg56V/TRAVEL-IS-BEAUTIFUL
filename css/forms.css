@@ -1,0 +1,139 @@
+div#cover {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 1;
+}
+
+div#contact_form {
+    display: none;
+    padding: 20px 15px;
+    width: 335px;
+    height: auto;
+    background-color: #d03958;
+    border-radius: 5px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 2;
+    top: 30px;
+    left: calc((100% - 335px)/2);
+}
+
+div#contact_form > p {
+    font-family: "MontserratRegular";
+    font-size: 22px;
+    color: white;
+}
+
+div#close {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    left: 285px;
+    bottom: 40px;
+}
+
+div#close:hover {
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 2s;
+    transition-duration: 2s;
+    -webkit-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
+}
+
+div#close > span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: relative;
+}
+
+div#close > span:nth-of-type(1) {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 14px;
+}
+
+#close > span:nth-of-type(2) {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 12px;
+}
+
+form[name="contact"] > input {
+    font-family: "PTserifRegular";
+    font-size: 20px;
+    color: #1f1f1f;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+form[name="contact"] >label {
+    font-family: "PTserifRegular";
+    font-size: 20px;
+    color: white;
+}
+
+form[name="contact"] > input:not([type="submit"]) {
+    padding: 4px 0;
+    text-indent: 10px;
+}
+
+form[name="contact"] > input:not([type="submit"]):nth-of-type(n+2) {
+    margin-top: 5px;
+}
+
+form[name="contact"] > input:not([type="submit"])::-webkit-input-placeholder {
+    color: lightgray;
+    font-weight: 100;
+}
+
+form[name="contact"] > input:not([type="submit"])::-moz-placeholder {
+    color: lightgray;
+    font-weight: 100;
+}
+
+form[name="contact"] > input:not([type="submit"]):-moz-placeholder {
+    color: lightgray;
+    font-weight: 100;
+}
+
+form[name="contact"] > input:not([type="submit"]):-ms-input-placeholder {
+    color: lightgray;
+    font-weight: 100;
+}
+
+form[name="contact"] > input[type="submit"] {
+    padding: 10px 0;
+    font-family: "MontserratRegular";
+    font-size: 22px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: #1f1f1f;
+    color: white;
+}
+
+@media screen and (max-width:400px) {
+    div#contact_form {
+        width: 100%;
+        top: 30px;
+        left: 0;
+    }
+    form[name="contact"] >label {
+        font-size: 19px;
+    }
+    div#close {
+        left: calc(100% - 30px/2);
+    }
+}
